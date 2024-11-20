@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/rizac/stream2segment:
+      branch: main
+      repo: https://github.com/rizac/stream2segment/
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/rizac/stream2segment git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-salmon-bonobo.sh
+        container: qc.acc_slimy-heliotrope-dog
+  QC.Doc:
+    repos:
+      github.com/rizac/stream2segment find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-magenta-wolfhound.sh
+        container: qc.doc_snoopy-viridian-ladybird
+      github.com/rizac/stream2segment git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-thistle-hornet.sh
+        container: qc.doc_zippy-plum-tzu
+      github.com/rizac/stream2segment markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-denim-pinscher.sh
+        container: qc.doc_slimy-zucchini-spoonbill
+  QC.Lic:
+    repos:
+      github.com/rizac/stream2segment licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-tan-malamute.sh
+        container: qc.lic_tasty-bronze-frise
+  QC.Sec:
+    repos:
+      github.com/rizac/stream2segment bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-ecru-opossum.sh
+        container: qc.sec_paltry-fuchsia-lemming
+  QC.Sty:
+    repos:
+      github.com/rizac/stream2segment flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-amaranth-gharial.sh
+        container: qc.sty_flabby-magenta-centipede
+  QC.Uni:
+    repos:
+      github.com/rizac/stream2segment pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-periwinkle-beaver.sh
+        container: qc.uni_randy-brass-caracal
+  QC.Ver:
+    repos:
+      github.com/rizac/stream2segment get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-amethyst-dingo.sh
+        container: qc.ver_smelly-teal-gibbon
+timeout: 5400
