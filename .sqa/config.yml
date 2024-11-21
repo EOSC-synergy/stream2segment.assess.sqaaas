@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/rizac/stream2segment git:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-salmon-bonobo.sh
-        container: qc.acc_slimy-heliotrope-dog
+        - /usr/bin/env sh .sqa/script.hazy-blue-turtle.sh
+        container: qc.acc_snappy-lilac-wombat
   QC.Doc:
     repos:
       github.com/rizac/stream2segment find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-magenta-wolfhound.sh
-        container: qc.doc_snoopy-viridian-ladybird
+        - /usr/bin/env sh .sqa/script.snappy-goldenrod-millipede.sh
+        container: qc.doc_trippy-cyan-retriever
       github.com/rizac/stream2segment git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-thistle-hornet.sh
-        container: qc.doc_zippy-plum-tzu
+        - /usr/bin/env sh .sqa/script.snippy-coral-frog.sh
+        container: qc.doc_cloudy-orange-tarsier
       github.com/rizac/stream2segment markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-denim-pinscher.sh
-        container: qc.doc_slimy-zucchini-spoonbill
+        - /usr/bin/env sh .sqa/script.craggy-apricot-bat.sh
+        container: qc.doc_scaly-carmine-wildebeest
   QC.Lic:
     repos:
       github.com/rizac/stream2segment licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-tan-malamute.sh
-        container: qc.lic_tasty-bronze-frise
+        - /usr/bin/env sh .sqa/script.geeky-wisteria-llama.sh
+        container: qc.lic_cloudy-blue-buffalo
   QC.Sec:
     repos:
       github.com/rizac/stream2segment bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-ecru-opossum.sh
-        container: qc.sec_paltry-fuchsia-lemming
+        - /usr/bin/env sh .sqa/script.skanky-azure-ostrich.sh
+        container: qc.sec_paltry-lemon-neanderthal
   QC.Sty:
     repos:
       github.com/rizac/stream2segment flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-amaranth-gharial.sh
-        container: qc.sty_flabby-magenta-centipede
+        - /usr/bin/env sh .sqa/script.wheezy-cardinal-leopard.sh
+        container: qc.sty_sunny-cardinal-antelope
   QC.Uni:
     repos:
       github.com/rizac/stream2segment pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-periwinkle-beaver.sh
-        container: qc.uni_randy-brass-caracal
+        - /usr/bin/env sh .sqa/script.grumpy-cobalt-lemming.sh
+        container: qc.uni_lovely-brass-wasp
   QC.Ver:
     repos:
       github.com/rizac/stream2segment get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-amethyst-dingo.sh
-        container: qc.ver_smelly-teal-gibbon
+        - /usr/bin/env sh .sqa/script.baggy-charcoal-chicken.sh
+        container: qc.ver_woozy-persimmon-macaw
 timeout: 5400
